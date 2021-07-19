@@ -115,9 +115,16 @@ You will also need to build the two tests in the `CheckoutForm.test.js` file and
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers to the questions within `interview_answers.md` file. These will not be counted as a part of your sprint score but will be helpful for preparing you for your endorsement interview, and enhancing overall understanding.
 
 1. What are the main differences between a stateful and a functional component?
+    A: Functional components are functions that return HTML-like elements and utilize the props that are passed into the function to return data. Functional components do not have their own state and need to pass states from a parent component down to their children. Stateful (AKA Class) components require a render function in order to display elements. Class components can use the setState function which means that each data set that needs updating does not need their state to be individually declared.
 
 2. When does a componentWillMount function be called? What about a componentWillUpdate?
+    A: You want to call the componentWillMount before the render method is being invoked. It is used to work in place of a constructor. The componentWillUpdate function is called right before a render. It is genreally used to called whenever new props are passed to the component, or the state is changed.
 
 3. Define stateful logic.
+    A: Stateful logic is when we give logic to components like handlers. The function will act according to the line of logic that is stated. Custom hooks can be reused throughout an application in multiple components. Stateful logic gives custom hooks the ability to execute multiple times without the hook changing during its use. The hooks in each instance of use will not be shared and will act individually when used. So, what you do in one component, stays in that component.
 
 4. What are the three step of creating a successful test? What is done in each phase?
+    A: After importing the methods for testing, the three steps of creating a should follow: Arrange, Act, and Assert
+    1. Arrange - We need to render a react element to start the test since we need a location or focus for what we are testing on. So, far we have covered rendering components.
+    2. Act - Next we need act or choose the elements we wish to test by identifying them using methods from the testing library and by the elements attributes (such as text and IDs).
+    3. Assert - Finally, we need to expect something to happen or occur from the elements we selected in the Act Phase. This will let us know that the elements are operating correctly and give results we expect to see.
